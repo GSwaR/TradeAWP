@@ -69,6 +69,10 @@
     <Compile Include="Assets\BackButton.cs" />
     <Compile Include="Assets\ExitButton.cs" />
     <Compile Include="Assets\Scripts\CreateButtons\AddNewBuyer.cs" />
+    <Compile Include="Assets\Scripts\CreateButtons\AddNewWarranty.cs" />
+    <Compile Include="Assets\InitialiseManager.cs" />
+    <Compile Include="Assets\PriceCalculator.cs" />
+    <Compile Include="Assets\AddNewOrder.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -9,7 +9,7 @@ public class UserNameLoader : MonoBehaviour
     public Text LoginUsername;
     public ConnectionManager ConnectionManager;
 
-    private void Awake()
+    private void Start()
     {
         Username.text = LoginUsername.text;
         if (ConnectionManager.Membership == "owner")

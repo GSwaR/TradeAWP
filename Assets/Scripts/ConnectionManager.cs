@@ -39,8 +39,8 @@ public class ConnectionManager : MonoBehaviour
             Connection = new SqlConnection(builder.ConnectionString);
             Connection.Open();
             SetMembership(user);
-
-            StateManager.SetCurrentState(WorkFlowState);
+            StateManager.WorkflowState.EnableUI.SetActive(true);
+            StateManager.SetCurrentState(StateManager.MenuState);
         }
         catch(Exception e)
         {

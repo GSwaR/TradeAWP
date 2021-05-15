@@ -1943,8 +1943,9 @@ GameObject:
   - component: {fileID: 157307215}
   - component: {fileID: 157307214}
   - component: {fileID: 157307213}
+  - component: {fileID: 157307216}
   m_Layer: 5
-  m_Name: InputField (5)
+  m_Name: InputAmount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2074,6 +2075,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 157307211}
   m_CullTransparentMesh: 1
+--- !u!114 &157307216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157307211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecd92b563805a8541a7000e8b67869b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ItemID: {fileID: 1245130886}
+  Amount: {fileID: 157307213}
+  InputField: {fileID: 157307213}
+  ConnectionManager: {fileID: 1789950708}
+  Price: {fileID: 488436938}
 --- !u!1 &160825341
 GameObject:
   m_ObjectHideFlags: 0
@@ -2793,7 +2811,7 @@ GameObject:
   - component: {fileID: 219366284}
   - component: {fileID: 219366283}
   m_Layer: 5
-  m_Name: InputField (4)
+  m_Name: InputBuyTime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9129,7 +9147,7 @@ GameObject:
   - component: {fileID: 574418760}
   - component: {fileID: 574418759}
   m_Layer: 5
-  m_Name: InputField (1)
+  m_Name: InputWarrantyID
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10361,6 +10379,7 @@ GameObject:
   - component: {fileID: 643047288}
   - component: {fileID: 643047287}
   - component: {fileID: 643047286}
+  - component: {fileID: 643047289}
   m_Layer: 5
   m_Name: 'Add new '
   m_TagString: Untagged
@@ -10470,6 +10489,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 643047284}
   m_CullTransparentMesh: 1
+--- !u!114 &643047289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643047284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cec92c3052c372b4f9437214cb7c2388, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConnectionManager: {fileID: 1789950708}
+  Button: {fileID: 643047286}
+  BuyerID: {fileID: 2126736831}
+  OrderID: {fileID: 1463731503}
+  ManagerID: {fileID: 1127983797}
+  ItemID: {fileID: 1665845465}
+  BuyTime: {fileID: 881897872}
+  Amount: {fileID: 728223092}
+  Price: {fileID: 488436938}
 --- !u!1 &643894645
 GameObject:
   m_ObjectHideFlags: 0
@@ -11654,7 +11694,7 @@ GameObject:
   - component: {fileID: 686406587}
   - component: {fileID: 686406586}
   m_Layer: 5
-  m_Name: InputField (1)
+  m_Name: InputOrderID
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11983,7 +12023,7 @@ GameObject:
   - component: {fileID: 703468963}
   - component: {fileID: 703468962}
   m_Layer: 5
-  m_Name: InputField
+  m_Name: InputBuyerID
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12126,7 +12166,7 @@ GameObject:
   - component: {fileID: 706946854}
   - component: {fileID: 706946853}
   m_Layer: 5
-  m_Name: InputField (4)
+  m_Name: InputTerm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14092,7 +14132,7 @@ GameObject:
   - component: {fileID: 844181901}
   - component: {fileID: 844181900}
   m_Layer: 5
-  m_Name: InputField (6)
+  m_Name: InputPrice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14126,7 +14166,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 844181898}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d199490a83bb2b844b9695cbf13b01ef, type: 3}
   m_Name: 
@@ -14158,7 +14198,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 844181901}
   m_TextComponent: {fileID: 488436938}
   m_Placeholder: {fileID: 515458652}
@@ -14515,7 +14555,7 @@ GameObject:
   - component: {fileID: 875127139}
   - component: {fileID: 875127138}
   m_Layer: 5
-  m_Name: InputField (5)
+  m_Name: InputWarrantyTypeID
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15452,6 +15492,7 @@ GameObject:
   - component: {fileID: 911342215}
   - component: {fileID: 911342214}
   - component: {fileID: 911342213}
+  - component: {fileID: 911342216}
   m_Layer: 5
   m_Name: 'Add new '
   m_TagString: Untagged
@@ -15561,6 +15602,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 911342211}
   m_CullTransparentMesh: 1
+--- !u!114 &911342216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 911342211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33e08e11fa40ad243bdda3bd13dffb28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ConnectionManager: {fileID: 1789950708}
+  Button: {fileID: 911342213}
+  BuyerID: {fileID: 971249811}
+  WarrantyID: {fileID: 1844266781}
+  WarrantyTypeID: {fileID: 1367788457}
+  ItemID: {fileID: 808697375}
+  BuyTime: {fileID: 661240601}
+  Term: {fileID: 1931414168}
 --- !u!1 &920018100
 GameObject:
   m_ObjectHideFlags: 0
@@ -18545,6 +18606,7 @@ GameObject:
   - component: {fileID: 1127983796}
   - component: {fileID: 1127983798}
   - component: {fileID: 1127983797}
+  - component: {fileID: 1127983799}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -18613,6 +18675,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1127983795}
   m_CullTransparentMesh: 1
+--- !u!114 &1127983799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127983795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1a3ad157633b744ea3028a49eb776da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UserName: {fileID: 899016892}
+  ManagerID: {fileID: 1127983797}
 --- !u!1 &1136015203
 GameObject:
   m_ObjectHideFlags: 0
@@ -21046,7 +21122,7 @@ GameObject:
   - component: {fileID: 1245130887}
   - component: {fileID: 1245130886}
   m_Layer: 5
-  m_Name: InputField (3)
+  m_Name: InputItemID
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21188,8 +21264,9 @@ GameObject:
   - component: {fileID: 1252931125}
   - component: {fileID: 1252931124}
   - component: {fileID: 1252931123}
+  - component: {fileID: 1252931126}
   m_Layer: 5
-  m_Name: InputField (2)
+  m_Name: InputManagerID
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21223,7 +21300,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1252931121}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d199490a83bb2b844b9695cbf13b01ef, type: 3}
   m_Name: 
@@ -21255,7 +21332,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1252931124}
   m_TextComponent: {fileID: 1127983797}
   m_Placeholder: {fileID: 1010055884}
@@ -21319,6 +21396,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1252931121}
   m_CullTransparentMesh: 1
+--- !u!114 &1252931126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1252931121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1a3ad157633b744ea3028a49eb776da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UserName: {fileID: 899016892}
+  ManagerID: {fileID: 1127983797}
 --- !u!1 &1257058096
 GameObject:
   m_ObjectHideFlags: 0
@@ -25292,7 +25383,7 @@ GameObject:
   - component: {fileID: 1555743000}
   - component: {fileID: 1555742999}
   m_Layer: 5
-  m_Name: InputField (2)
+  m_Name: InputItemID
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25870,7 +25961,7 @@ GameObject:
   - component: {fileID: 1589657129}
   - component: {fileID: 1589657128}
   m_Layer: 5
-  m_Name: InputField (3)
+  m_Name: InputBuyTime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29518,7 +29609,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1834904109
 RectTransform:
   m_ObjectHideFlags: 0
@@ -32942,7 +33033,7 @@ GameObject:
   - component: {fileID: 2054315567}
   - component: {fileID: 2054315566}
   m_Layer: 5
-  m_Name: InputField
+  m_Name: InputBuyerId
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

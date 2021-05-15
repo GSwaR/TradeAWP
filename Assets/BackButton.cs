@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class BackButton : MonoBehaviour
 {
     public Button Button;
@@ -21,8 +21,8 @@ public class BackButton : MonoBehaviour
         {
             StateManager.SetCurrentState(StateManager.LoginState);
             ConnectionManager.CloseConnection();
-            LoginButton.Username.text = "";
-            LoginButton.Password.text = "";
+            Scene scene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(0);
         }
         else {
             StateManager.SetCurrentState(StateManager.MenuState);
