@@ -11,14 +11,26 @@ public class TableBrandGetter : MonoBehaviour
     public GameObject[] Columns;
     public GameObject[] ColumnObjects;
     public GameObject Content;
+    protected Vector3[] transforms;
 
     private void OnEnable()
     {
+        transforms = new Vector3[Columns.Length];
         OnClick();
+    }
+
+    protected void SetTransforms()
+    {
+        for (int i = 0; i < Columns.Length; i++)
+        {
+            transforms[i] = Columns[i].transform.position;
+        }
     }
 
     public virtual void OnClick()
     {
+        SetTransforms();
+
         string queryString = @"SELECT [BrandID]
                                 ,[BrandName]
                                 FROM [TradeManagerConsole].[dbo].[Brand]";
@@ -39,24 +51,18 @@ public class TableBrandGetter : MonoBehaviour
         RectTransform contentSize = Content.GetComponent<RectTransform>();
         Content.GetComponent<RectTransform>().sizeDelta = new Vector2(contentSize.sizeDelta.x, contentSize.sizeDelta.y + BrandID.Count*50);
 
-        Vector3 column1 = Columns[0].transform.position;
-        Vector3 column2 = Columns[1].transform.position;
+        CreateAndSetColumn(BrandID, 0);
+        CreateAndSetColumn(BrandName, 1);
+    }
 
-        foreach (string s in BrandID)
+    protected void CreateAndSetColumn(List<string> list, int i)
+    {
+        foreach (string s in list)
         {
-            column1.y -= Columns[0].GetComponent<RectTransform>().transform.localScale.y * 1.5f;
-            GameObject columnObject = Instantiate(ColumnObjects[0], Content.transform);
+            transforms[i].y -= Columns[i].GetComponent<RectTransform>().transform.localScale.y * 1.5f;
+            GameObject columnObject = Instantiate(ColumnObjects[i], Content.transform);
             RectTransform rectTransform = columnObject.GetComponent<RectTransform>();
-            rectTransform.transform.position = column1;
-            columnObject.GetComponentInChildren<Text>().text = s;
-        }
-
-        foreach (string s in BrandName)
-        {
-            column2.y -= Columns[1].GetComponent<RectTransform>().transform.localScale.y * 1.5f;
-            GameObject columnObject = Instantiate(ColumnObjects[1], Content.transform);
-            RectTransform rectTransform = columnObject.GetComponent<RectTransform>();
-            rectTransform.transform.position = column2;
+            rectTransform.transform.position = transforms[i];
             columnObject.GetComponentInChildren<Text>().text = s;
         }
     }

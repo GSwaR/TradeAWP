@@ -18,6 +18,7 @@ public class AddNewBuyer : MonoBehaviour
     private void Awake()
     {
         Button.onClick.AddListener(OnClick);
+
     }
 
     void OnClick()

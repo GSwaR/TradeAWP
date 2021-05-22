@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Text;
 using UnityEngine.UI;
 using UnityEngine;
+using System.IO;
 using System.Net.Sockets;
 
 public class LoginButton : MonoBehaviour
@@ -20,11 +21,14 @@ public class LoginButton : MonoBehaviour
     void Start()
     {
         ButtonToLogIn.onClick.AddListener(OnClick);
+
     }
 
     public void OnClick()
     {
-        ConnectionManager.SetConnection(user:Username.text, password:Password.text, CustomDataSource.text);
+        ConnectionManager.SetConnection(user: Username.text, password: Password.text);
     }
+
+
 }
 

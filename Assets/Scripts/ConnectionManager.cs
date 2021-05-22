@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Data;
+using System.IO;
 using System.Data.SqlClient;
 using System.Text;
 using UnityEngine;
@@ -21,18 +21,9 @@ public class ConnectionManager : MonoBehaviour
 
     public StateManager StateManager;
 
-    public void SetConnection(string user, string password, string dataSource)
+    public void SetConnection(string user, string password)
     {
-        if (dataSource.Length > 0)
-        {
-            DataSource = dataSource;
-        }
-
-        SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-        builder.UserID = user;
-        builder.Password = password;
-        builder.InitialCatalog = InitialCatalog;
-        builder.DataSource = DataSource;
+        SqlConnectionStringBuilder builder = CreateBuilder(user, password);
 
         try
         {
@@ -89,5 +80,37 @@ public class ConnectionManager : MonoBehaviour
                 Membership = "reader";
             }
         }
+    }
+
+    private string StringConnection()
+    {
+        if (File.Exists("DBConnectionString"))
+        {
+            return File.ReadAllText("DBConnectionString");
+        }
+        else
+        {
+            return null;
+        }
+
+    }
+
+    private SqlConnectionStringBuilder CreateBuilder(string user, string password)
+    {
+        string[] attributes = StringConnection().Split(';');
+        string editedString = "";
+        for (int i = 0; i < attributes.Length; i++)
+        {
+            if (!attributes[i].Contains("Provider") && !attributes[i].Contains("Integrated Security") && !attributes[i].Contains("Server SPN"))
+            {
+                editedString += attributes[i] + ";";
+            }
+        }
+
+        SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder(editedString);
+        builder.UserID = user;
+        builder.Password = password;
+
+        return builder;
     }
 }

@@ -1,0 +1,1 @@
+Provider=SQLNCLI11.1;Integrated Security=SSPI;Persist Security Info=False;User ID="";Initial Catalog=TradeManagerConsole;Data Source=DESKTOP-H9SB84D;Initial File Name="";Server SPN=""
