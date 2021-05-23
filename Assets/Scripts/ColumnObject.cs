@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ColumnObject : MonoBehaviour
 {
-    private void OnDisable()
+    public void OnDisable()
     {
         Destroy(gameObject);
     }

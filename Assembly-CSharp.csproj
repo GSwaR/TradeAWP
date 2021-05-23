@@ -57,31 +57,38 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Workflow\DropDownMenus\CreateDropDownMenu.cs" />
+    <Compile Include="Assets\Scripts\DropDowns\ItemDropDownMenu.cs" />
     <Compile Include="Assets\Scripts\Tables\TableWarrantyGetter.cs" />
     <Compile Include="Assets\Scripts\Login\LoginSuccessHandler.cs" />
     <Compile Include="Assets\Scripts\Tables\TableBrandGetter.cs" />
+    <Compile Include="Assets\Scripts\DropDowns\WarrantyTypeDropDownMenu.cs" />
     <Compile Include="Assets\Scripts\Tables\TableWarrantyTypeGetter.cs" />
     <Compile Include="Assets\PriceCalculator.cs" />
     <Compile Include="Assets\BackButton.cs" />
     <Compile Include="Assets\Scripts\ColumnObject.cs" />
     <Compile Include="Assets\Scripts\CreateButtons\AddNewBuyer.cs" />
     <Compile Include="Assets\Scripts\Workflow\UserNameLoader.cs" />
+    <Compile Include="Assets\Scripts\DropDowns\BuyerDropDownMenu.cs" />
+    <Compile Include="Assets\Scripts\Tables\TableBuyerGetter.cs" />
     <Compile Include="Assets\Scripts\Tables\TableItemGetter.cs" />
     <Compile Include="Assets\Scripts\Tables\TableItemTypeGetter.cs" />
     <Compile Include="Assets\Scripts\Workflow\DropDownMenus\DisableGameObject.cs" />
     <Compile Include="Assets\ExitButton.cs" />
     <Compile Include="Assets\Scripts\States\State.cs" />
+    <Compile Include="Assets\Scripts\DropDowns\DropDownMenu.cs" />
     <Compile Include="Assets\Scripts\Login\LoginErrorHandler.cs" />
     <Compile Include="Assets\Scripts\CreateButtons\AddNewWarranty.cs" />
     <Compile Include="Assets\Scripts\States\StateManager.cs" />
     <Compile Include="Assets\Scripts\Login\LoginButton.cs" />
     <Compile Include="Assets\Scripts\Tables\TableManagerGetter.cs" />
     <Compile Include="Assets\CloseButton.cs" />
+    <Compile Include="Assets\Scripts\Tables\TableBuyOrderGetter.cs" />
     <Compile Include="Assets\InitialiseManager.cs" />
     <Compile Include="Assets\Scripts\ConnectionManager.cs" />
     <Compile Include="Assets\AddNewOrder.cs" />
-    <Compile Include="Assets\Scripts\Tables\TableBuyOrderGetter.cs" />
-    <Compile Include="Assets\Scripts\Tables\TableBuyerGetter.cs" />
+    <Compile Include="Assets\Scripts\DropDowns\BuyerItemDropDownMenu.cs" />
+    <Compile Include="Assets\Scripts\ReportButtons\GetDataButton.cs" />
+    <Compile Include="Assets\Scripts\ReportButtons\GetDataButtonOrders.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
